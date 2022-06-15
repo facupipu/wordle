@@ -1,5 +1,3 @@
-// palabras para el juego, agregar las que quieran siempre de 5 letras
-// es un array de strings (dict por dictionary)
 let dict = [
   'gatos',
   'papas',
@@ -23,3 +21,15 @@ let dict = [
   'genio',
   'pibes'
 ];
+
+let random = Math.floor(Math.random() * dict.length);
+let div = document.createElement('div');
+div.textContent = dict[random]
+let intento = document.getElementById('intento');
+console.log(intento);
+if(dict.includes(intento)){
+  console.log('Esta en el array');
+}
+function logReset(event) {
+  log.textContent = `button2: ${event.timeStamp}`;
+}

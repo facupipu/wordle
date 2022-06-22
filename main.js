@@ -23,13 +23,27 @@ let dict = [
 ];
 
 let random = Math.floor(Math.random() * dict.length);
-let div = document.createElement('div');
-div.textContent = dict[random]
-let intento = document.getElementById('intento');
-console.log(intento);
-if(dict.includes(intento)){
-  console.log('Esta en el array');
+let intento = document.getElementById('intento').value;
+
+
+function imprimir(e) {
+  e.preventDefault();
+  let intento = e.target.intento.value;
+  if(dict.includes(intento)){
+    console.log(e.target.intento.value);
+    for (let i = 0; i < 5; i++) {
+      let div = document.createElement('div');
+      div.className = "letras";
+      div.innerHTML = intento[i];
+      document.getElementById('container').append(div);
+    }
+  }
+  else {
+    console.log('no esta en el array')
+  }
 }
-function logReset(event) {
-  log.textContent = `button2: ${event.timeStamp}`;
-}
+//
+// function nextFocus(iF, iS) {
+//   document.getElementById(iF).addEventListener('keyleft', function(event)
+// )
+// }

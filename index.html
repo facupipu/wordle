@@ -7,22 +7,28 @@
   </head>
   <body>
     <div>
+      <main>
       <header>
         <h1>Wordle</h1>
       </header>
-      <main>
-        <form class="" action="index.html" method="post">
+        <form action="index.html" method="post" onsubmit="imprimir(event)">
           <label>
-            <input type="text" name="intento" id="intento"/>
-          </label>
-          <label>
-            <button type="button" name="button">Enviar</button>
-          </label>
+            <input type="text"  name="intento" id="intento" maxlength="5" minlength="5"/>
+            <button type="submit" name="button" id="enviar">Enviar</button>
         </form>
-
-
+        <!-- <section>
+          <input class="letras" type="text" id="i1" onkeypress="nextFocus('i1' , 'i2')" minlength="1" maxlength="1">
+          <input class="letras" type="text" id="i2" onkeypress="nextFocus('i1' , 'i2')" minlength="1" maxlength="1">
+          <input class="letras" type="text" id="i3" onkeypress="nextFocus('i1' , 'i2')" minlength="1" maxlength="1">
+          <input class="letras" type="text" id="i4" onkeypress="nextFocus('i1' , 'i2')" minlength="1" maxlength="1">
+          <input class="letras" type="text" id="i5" minlength="1" maxlength="1">
+        </section>-->
+        <section id="container">
+        </section>
       </main>
-      <button type="reset" name="button2">Reiniciar</button>
+
+      <button class="resetear" onClick="window.location.href=window.location.href">Resetear</button>
+
     </div>
   <script src="main.js" charset="utf-8"></script>
   </body>

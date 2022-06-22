@@ -9,6 +9,7 @@ div{
   height: 500px;
   border-radius: 7.5%;
   margin: 50px auto;
+  justify-content: space-between;
 }
 
 h1{
@@ -16,9 +17,26 @@ h1{
 }
 
 form {
-
+  display: flex;
+  justify-content: center;
 }
 
-button {
+.resetear {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
 
+#container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.letras {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: #bdbdbd;
+  border: 1px solid black;
+  text-align: center;
 }
